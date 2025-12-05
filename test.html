@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Test Page</title>
+    <body>
+    <h1>Job Applicaton form </h1>
+
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="number" id="phone" name="phone"><br><br>
+
+        <label for ="position">Position:</label><br><br>
+        <select id="position" name="position">
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="manager">Manager</option><br>
+        </select><br>
+
+        <label for="resume">Resume:</label><br>
+        <input type="file" id="resume" name="resume"><br><br>
+
+        <button type="submit" onclick=addEventListener(event)>Submit</button>
+    </form>
+    <script>
+       
+
+
+       function addEventListener(event) {
+            event.preventDefault();
+             let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let position = document.getElementById("position").value;
+        let resume = document.getElementById("resume").value;
+
+        console.log("Name: " + name);
+        console.log("Email: " + email);
+        console.log("Phone: " + phone);
+        console.log("Position: " + position);
+        console.log("Resume: " + resume);
+            alert("Form submitted successfully!");
+        }
+
+        if(name === ""){
+            alert("Please enter your name");
+            return;
+        }
+        /*if(email!=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/){
+            alert("Please enter a valid email address");
+        }*/
+
+        
+    </script>
+    </body>
+</html>
